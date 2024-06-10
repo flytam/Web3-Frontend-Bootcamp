@@ -55,4 +55,12 @@ contract NFTMarket {
 
         delete listings[listingId];
     }
+
+    function getAllListings() public view returns (Listing[] memory) {
+        Listing[] memory result = new Listing[](listingCounter);
+        for (uint256 i = 0; i < listingCounter; i++) {
+            result[i] = listings[i];
+        }
+        return result;
+    }
 }

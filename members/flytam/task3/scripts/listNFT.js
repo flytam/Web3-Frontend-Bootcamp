@@ -6,7 +6,7 @@ const nftContractAddress = constract.nft;
 async function main() {
     const [deployer] = await ethers.getSigners();
     
-    const tokenId = 1; 
+    const tokenId = 4; 
     const price = 100n; 
   
     const NFTMarket = await ethers.getContractFactory("NFTMarket");
